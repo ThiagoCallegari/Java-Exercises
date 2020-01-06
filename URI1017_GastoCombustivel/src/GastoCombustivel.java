@@ -6,7 +6,7 @@ public class GastoCombustivel {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		int tempHoras, velocidadeMedia; // horas e km/h respectivamente
+		int tempHoras, velocidadeMedia; 
 		double qtdLitros;
 		
 		tempHoras = sc.nextInt();
@@ -18,5 +18,4 @@ public class GastoCombustivel {
 		
 		sc.close();
 	}
-
 }
