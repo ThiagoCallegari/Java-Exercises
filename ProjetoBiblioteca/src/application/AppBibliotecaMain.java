@@ -8,47 +8,23 @@ public class AppBibliotecaMain {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		String titulo, autor, categoria;
-		int ano, prateleira, estante, emprestimoResp;
-		boolean emprestimo;
+		Livro[] livro = new Livro[2];		
 		
-		System.out.print("Título do livro: ");
-		titulo = sc.nextLine();
-		System.out.print("Autor: ");
-		autor = sc.nextLine();
-		System.out.print("Ano: ");
-		ano = sc.nextInt();
-		System.out.print("Categoria: ");
-		sc.nextLine();
-		categoria = sc.nextLine();
-		System.out.print("Nº da prateleira: ");
-		sc.nextLine();
-		prateleira = sc.nextInt();
-		System.out.print("Nº da estante: ");
-		estante = sc.nextInt();
-		System.out.print("Está emprestado? (true = 1/false = 2)");
-		emprestimoResp = sc.nextInt();
+		livro[0] = new Livro("O nome do vento", "Patrick Rotfuss", 2006, "Fantasia", 5, 3, true);		
+		livro[1] = new Livro("O sol é para todos", "Harper Lee", 1960, "Drama", 7, 1, false);
 		
-		if (emprestimoResp == 1) {
-			emprestimo = true;
-		}
-		else {
-			emprestimo = false;
-		}
-		
-		Livro livro = new Livro("O nome do vento", "Patrick Rotfuss", 2006, "Fantasia", prateleira, estante, true);		
-		Livro meuLivro = new Livro(titulo, autor, ano, categoria, prateleira, estante, emprestimo);
+		System.out.print("Insira o Id do livro: ");
+		int id = sc.nextInt();
 		
 		System.out.println();
-		System.out.println("Título do livro: " + meuLivro.getTitulo());
-		System.out.println("Autor: " + meuLivro.getAutor());
-		System.out.println("Ano: " + meuLivro.getAno());
-		System.out.println("Categoria: " + meuLivro.getCategoria());
-		System.out.println("Nº da prateleira: " + meuLivro.getNumPrateleira());
-		System.out.println("Nº da estante: " + meuLivro.getNumEstante());
-		System.out.println("O livro está emprestado? " + meuLivro.isEmprestimo());
+		System.out.println("Título do livro: " + livro[id].getTitulo());
+		System.out.println("Autor: " + livro[id].getAutor());
+		System.out.println("Ano: " + livro[id].getAno());
+		System.out.println("Categoria: " + livro[id].getCategoria());
+		System.out.println("Nº da prateleira: " + livro[id].getNumPrateleira());
+		System.out.println("Nº da estante: " + livro[id].getNumEstante());
+		System.out.println("O livro está emprestado? " + livro[id].isEmprestimo());
 		
 		sc.close();
 	}
-
 }
