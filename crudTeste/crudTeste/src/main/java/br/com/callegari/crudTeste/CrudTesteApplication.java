@@ -1,0 +1,13 @@
+package br.com.callegari.crudTeste;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CrudTesteApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(CrudTesteApplication.class, args);
+	}
+
+}
