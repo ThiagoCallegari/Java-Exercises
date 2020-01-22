@@ -16,7 +16,7 @@ import br.com.callegari.tokenLogin.security.Autenticator;
 public class ProdutoController {
 
 	@GetMapping("/produto/todos")
-	public ResponseEntity<ArrayList<Produto>> getAllAlunos(@RequestParam String token){
+	public ResponseEntity<ArrayList<Produto>> getAllProdutos(@RequestParam String token){
 		if (Autenticator.isValid(token)) {
 			/* este trecho é simulando uma consulta ao banco de dados */
 			ArrayList<Produto> lista = new ArrayList<Produto>();

@@ -1,7 +1,13 @@
 <div class="row" *ngFor="let ITEM of lista">
-    <div class="col-md-12">
-        <h3>{{ITEM.codigo}} - {{ITEM.titulo}}</h3>
-        <h4>Detalhes: {{ITEM.detalhes}}</h4>
-        <h4>R$ {{ITEM.preco}}</h4>
+    <div class="col-md-4"></div>
+    <div class="col-md-4 center">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">{{ITEM.codigo}} - {{ITEM.titulo}}</h5>
+                <h4 class="card-text">Detalhes: {{ITEM.detalhes}}</h4>
+                <h4 class="card-text">R$ {{ITEM.preco}}</h4>
+            </div>
+        </div>
     </div>
+    <div class="col-md-4"></div>
 </div>
